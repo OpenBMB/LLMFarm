@@ -69,7 +69,7 @@ struct AddChatView: View {
     let gguf_type = UTType(tag: "gguf", tagClass: .filenameExtension, conformingTo: nil)
     
     @State private var model_settings_template:ChatSettingsTemplate = ChatSettingsTemplate()
-    let model_setting_templates = get_model_setting_templates()
+    @State var model_setting_templates = get_model_setting_templates()
     @State var save_as_template_name:String = "My Template"
     
     @State private var model_inference = "llama"
@@ -89,15 +89,16 @@ struct AddChatView: View {
     
     @State private var clearChatAlert = false
     
+    func refresh_templates(){
+        model_setting_templates = get_model_setting_templates()
+    }
+    
     init(add_chat_dialog: Binding<Bool>,edit_chat_dialog:Binding<Bool>,
          renew_chat_list: Binding<() -> Void>) {
         self._add_chat_dialog = add_chat_dialog
         self._edit_chat_dialog = edit_chat_dialog
         self._renew_chat_list = renew_chat_list
     }
-    
-    
-    
     
     init(add_chat_dialog: Binding<Bool>,edit_chat_dialog:Binding<Bool>,
         chat_name:String,renew_chat_list: Binding<() -> Void>) {
@@ -289,7 +290,7 @@ struct AddChatView: View {
                                                "parse_special_tokens":parse_special_tokens
         ]
         if is_template{
-            options["template_name"] = model_settings_template.template_name
+            options["template_name"] = save_as_template_name
         }
         return options
     }
@@ -305,7 +306,7 @@ struct AddChatView: View {
                     Button {
                         Task {
                             add_chat_dialog = false
-                            edit_chat_dialog = false
+//                            edit_chat_dialog = false
                         }
                     } label: {
                         Text("Cancel")
@@ -634,7 +635,7 @@ struct AddChatView: View {
                                     Spacer()
                                     Toggle("Metal", isOn: $use_metal)
                                         .frame(maxWidth: 120, alignment: .trailing)
-                                        .disabled((self.model_inference == "rwkv" || self.model_inference == "replit"  /*&& self.model_inference != "gpt2"*/) /*|| hardware_arch=="x86_64"*/)
+                                        .disabled((self.model_inference == "rwkv" || self.model_inference == "replit") /*|| hardware_arch=="x86_64"*/)
                                 }
                                 .padding(.horizontal)
                                 .padding(.bottom, 4)
@@ -871,6 +872,7 @@ struct AddChatView: View {
                                     Task {
                                         let options = get_chat_options_dict(is_template: true)
                                         _ = create_chat(options,edit_chat_dialog:true,chat_name:save_as_template_name + ".json",save_as_template:true)
+                                        refresh_templates()
 //                                        save_template_old(model_settings_template.template_name + ".json",
 //                                                      template_name: model_settings_template.template_name,
 //                                                      inference: model_inference,
@@ -893,28 +895,29 @@ struct AddChatView: View {
                             .frame(maxWidth: .infinity)
                             .padding(.horizontal)
                         }
-                        HStack {
-                            Button {
-                                Task {
-                                    clearChatAlert = true
+                        if edit_chat_dialog{
+                            HStack {
+                                Button {
+                                    Task {
+                                        clearChatAlert = true
+                                    }
+                                } label: {
+                                    Image(systemName: "trash")
+                                    Text("Clear chat history")
+                                        .foregroundStyle(.red)
                                 }
-                            } label: {
-                                Image(systemName: "trash")
-                                Text("Clear chat history")
-                                    .foregroundStyle(.red)
-                            }
-                            .alert("Are you sure?", isPresented: $clearChatAlert, actions: {
-                                  Button("Cancel", role: .cancel, action: {})
-                                  Button("Clear", role: .destructive, action: {
-                                      aiChatModel.messages = []
-                                      save_chat_history(aiChatModel.messages,aiChatModel.chat_name+".json")
-                                  })
+                                .alert("Are you sure?", isPresented: $clearChatAlert, actions: {
+                                    Button("Cancel", role: .cancel, action: {})
+                                    Button("Clear", role: .destructive, action: {
+                                        aiChatModel.messages = []
+                                        save_chat_history(aiChatModel.messages,aiChatModel.chat_name+".json")
+                                    })
                                 }, message: {
-                                  Text("The message history will be cleared")
+                                    Text("The message history will be cleared")
                                 })
+                            }
+                            .padding()
                         }
-                        .padding()
-                        
                         
                     }
                 }
