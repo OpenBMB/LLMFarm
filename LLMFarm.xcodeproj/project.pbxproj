@@ -159,6 +159,7 @@
 		15F210A92A1A659B0021F414 /* FileHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHelper.swift; sourceTree = "<group>"; };
 		15F210AB2A1A7B790021F414 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		15FB67412B1BDB0800174379 /* ExportLoraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportLoraView.swift; sourceTree = "<group>"; };
+		445ECF402B591ACD0023E5CE /* cpmb-model-q4_1.gguf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "cpmb-model-q4_1.gguf"; path = "models/cpmb-model-q4_1.gguf"; sourceTree = "<group>"; };
 		E61E38F329B1F0BA00114C15 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		E61E38F529B1F12E00114C15 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E624E2102958F21E00996CD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -324,6 +325,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		445ECF3C2B5913EB0023E5CE /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
 		E6024EC229EA7BEB001FE9B0 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
@@ -335,6 +343,8 @@
 		E624E1F52958ECC800996CD1 = {
 			isa = PBXGroup;
 			children = (
+				445ECF402B591ACD0023E5CE /* cpmb-model-q4_1.gguf */,
+				445ECF3C2B5913EB0023E5CE /* models */,
 				15141E5B2A651F8C0060E767 /* model_setting_templates */,
 				E6024EC229EA7BEB001FE9B0 /* Packages */,
 				E624E2102958F21E00996CD1 /* Info.plist */,
@@ -635,7 +645,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 12;
-				DEVELOPMENT_ASSET_PATHS = "\"LLMFarm/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "LLMFarm/Preview\\ Content models";
 				DEVELOPMENT_TEAM = 8U538LMC3K;
 				ENABLE_HARDENED_RUNTIME = YES;
 				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
@@ -684,7 +694,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 12;
-				DEVELOPMENT_ASSET_PATHS = "\"LLMFarm/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "LLMFarm/Preview\\ Content models";
 				DEVELOPMENT_TEAM = 8U538LMC3K;
 				ENABLE_HARDENED_RUNTIME = YES;
 				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
