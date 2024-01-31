@@ -1,4 +1,7 @@
-#ios上部署[MiniCPM](https://github.com/OpenBMB/MiniCPM)说明
+# ios上部署[MiniCPM](https://github.com/OpenBMB/MiniCPM)说明
+第一种直接下载我们转换好的模型：[转换好的模型](https://openbmb.oss-cn-hongkong.aliyuncs.com/model_center/mobile/ios/MiniCPM/minicpm-q4_1.gguf)，可以跳过模型转换和量化
+
+第二种从huggingface上下载原始模型，并按下面步骤进行转换和量化。
 
 ## 下载hf模型
 ## 模型格式转换和量化
