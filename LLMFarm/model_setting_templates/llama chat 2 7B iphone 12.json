@@ -1,13 +1,13 @@
 {
   "context" : 512,
   "prompt_format" : "<用户>{{prompt}}<AI>",
-  "reverse_prompt": "USER:",
-  "template_name" : "LLaMA 2 Chat 7B iPhone 12",
+  "reverse_prompt": "",
+  "template_name" : "CPM",
   "temp" : 0.7,
   "model_inference" : "llama",
   "top_p" : 0.95,
-  "n_batch" : 128,
+  "n_batch" : 8,
   "top_k" : 0,
-  "repeat_penalty" : 1.02,
+  "repeat_penalty" : 1.0,
   "use_metal" : true
 }

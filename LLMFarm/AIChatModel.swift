@@ -18,6 +18,7 @@ private extension Duration {
 
 var AIChatModel_obj_ptr:UnsafeMutableRawPointer? = nil
 
+
 @MainActor
 final class AIChatModel: ObservableObject {
     
@@ -239,13 +240,37 @@ final class AIChatModel: ObservableObject {
         self.predicting = true
         self.action_button_icon = "stop.circle"
         self.start_predicting_time = DispatchTime.now()
+        let out_path = Bundle.main.resourcePath!.appending("/model_setting_templates/output.json")
+       
         
+        let docsUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+        let destinationUrl = docsUrl?.appendingPathComponent("output.json")
+       
         self.chat?.conversation(text, { str, time in
             _ = self.process_predicted_str(str, time, &message, messageIndex)
-        }, 
-        {
+        },{
             final_str in
             print(final_str)
+            /*
+            ///<<<save to file
+            do{
+                let ret_str = "\"\n" + final_str + "\"\n\n"
+                let data = Data(ret_str.utf8)
+                if let destinationUrl = destinationUrl {
+                    if (FileManager().fileExists(atPath: destinationUrl.path)) {
+                        print("file exists")
+                    }
+                    let fileHandle = try FileHandle(forWritingTo: destinationUrl)
+                    try fileHandle.seekToEnd()
+                    fileHandle.seekToEndOfFile()
+                    fileHandle.write(data)
+                }
+            }catch {
+                print("write file failed: \(error)")
+            }
+            ///save to file>>>
+            ///
+             */
             self.AI_typing = 0
             self.total_sec = Double((DispatchTime.now().uptimeNanoseconds - self.start_predicting_time.uptimeNanoseconds)) / 1_000_000_000
             if (self.chat_name == self.chat?.chatName && self.chat?.flagExit != true){
@@ -268,5 +293,6 @@ final class AIChatModel: ObservableObject {
             }
             save_chat_history(self.messages,self.chat_name+".json")
         })
+            
     }
 }

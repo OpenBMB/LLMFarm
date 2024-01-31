@@ -63,6 +63,8 @@
 		15F210962A1920AA0021F414 /* AIChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F210922A1920AA0021F414 /* AIChatModel.swift */; };
 		15F210AA2A1A659B0021F414 /* FileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F210A92A1A659B0021F414 /* FileHelper.swift */; };
 		15FB67422B1BDB0800174379 /* ExportLoraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FB67412B1BDB0800174379 /* ExportLoraView.swift */; };
+		44682F9F2B5F58D6008467F3 /* input.json in Resources */ = {isa = PBXBuildFile; fileRef = 44682F9E2B5F58C6008467F3 /* input.json */; };
+		44682FA12B5F7BB6008467F3 /* output.json in Resources */ = {isa = PBXBuildFile; fileRef = 44682FA02B5F6AC2008467F3 /* output.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -162,6 +164,8 @@
 		15F210AB2A1A7B790021F414 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		15FB67412B1BDB0800174379 /* ExportLoraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportLoraView.swift; sourceTree = "<group>"; };
 		445ECF402B591ACD0023E5CE /* cpmb-model-q4_1.gguf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "cpmb-model-q4_1.gguf"; path = "models/cpmb-model-q4_1.gguf"; sourceTree = "<group>"; };
+		44682F9E2B5F58C6008467F3 /* input.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = input.json; sourceTree = "<group>"; };
+		44682FA02B5F6AC2008467F3 /* output.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = output.json; sourceTree = "<group>"; };
 		E61E38F329B1F0BA00114C15 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		E61E38F529B1F12E00114C15 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E624E2102958F21E00996CD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -211,6 +215,8 @@
 		15141E332A64875F0060E767 /* model_setting_templates */ = {
 			isa = PBXGroup;
 			children = (
+				44682FA02B5F6AC2008467F3 /* output.json */,
+				44682F9E2B5F58C6008467F3 /* input.json */,
 				159C699A2A9A52D200F74913 /* llama chat 2 7B iphone 12.json */,
 				157EFB052ABF3209001E0C7A /* llama chat 2 7B new.json */,
 				1532BF7D2AA113D5006DC514 /* MagicPrompt-Stable-Diffusion.json */,
@@ -499,6 +505,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44682FA12B5F7BB6008467F3 /* output.json in Resources */,
+				44682F9F2B5F58D6008467F3 /* input.json in Resources */,
 				15141E5C2A651F8C0060E767 /* model_setting_templates in Resources */,
 				159C699B2A9A52D200F74913 /* llama chat 2 7B iphone 12.json in Resources */,
 				15F210892A191B1B0021F414 /* Preview Assets.xcassets in Resources */,
@@ -650,7 +658,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_ASSET_PATHS = "LLMFarm/Preview\\ Content models";
-				DEVELOPMENT_TEAM = 8U538LMC3K;
+				DEVELOPMENT_TEAM = R788G44G34;
 				ENABLE_HARDENED_RUNTIME = YES;
 				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
 				ENABLE_PREVIEWS = NO;
@@ -669,12 +677,12 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 0.9.0;
-				PRODUCT_BUNDLE_IDENTIFIER = zkh.LLMFarm;
+				PRODUCT_BUNDLE_IDENTIFIER = test.LLMFarm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
@@ -718,12 +726,13 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 0.9.0;
-				PRODUCT_BUNDLE_IDENTIFIER = zkh.LLMFarm;
+				PRODUCT_BUNDLE_IDENTIFIER = kaihuozhang.LLMFarm;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = "-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;

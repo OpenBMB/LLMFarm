@@ -127,6 +127,7 @@ public struct LLMTextInput: View {
                     await aiChatModel.send(message: input_text)
                     input_text = ""
                 }
+                
             }
         }
         
