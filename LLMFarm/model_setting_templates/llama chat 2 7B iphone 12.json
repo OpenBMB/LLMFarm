@@ -1,13 +1,13 @@
 {
   "context" : 512,
-  "prompt_format" : "<系统命令>你是MiniCPM，是由面壁智能开发的语言模型。<用户>{{prompt}}<AI>",
+  "prompt_format" : "<用户>{{prompt}}<AI>",
   "reverse_prompt": "",
   "template_name" : "CPM",
   "temp" : 0.7,
   "model_inference" : "llama",
   "top_p" : 0.95,
-  "n_batch" : 8,
+  "n_batch" : 64,
   "top_k" : 0,
   "repeat_penalty" : 1.0,
-  "use_metal" : true
+  "use_metal" : false
 }

@@ -250,7 +250,7 @@ final class AIChatModel: ObservableObject {
             _ = self.process_predicted_str(str, time, &message, messageIndex)
         },{
             final_str in
-            print(final_str)
+            //print(final_str)
             /*
             ///<<<save to file
             do{
