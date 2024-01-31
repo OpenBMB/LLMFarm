@@ -1,4 +1,4 @@
-#ios上部署[MiniCPM](https://github.com/OpenBMB/MiniCPM)说明
+# ios上部署[MiniCPM](https://github.com/OpenBMB/MiniCPM)说明
 
 ## 下载hf模型
 ## 模型格式转换和量化
