@@ -2,7 +2,7 @@
 [中文版](https://github.com/OpenBMB/LLMFarm-MiniCPM/blob/main/README_cn.md)
 
 Based on [LLMFarm](https://github.com/guinmoon/LLMFarm), we run MiniCPM on ios devices.
-Note that the models run on android are quantized to 4-bit and may lose some performance. The original models can be found [here](https://github.com/OpenBMB/miniCPM).
+Note that the models run on ios are quantized to 4-bit and may lose some performance. The original models can be found [here](https://github.com/OpenBMB/miniCPM).
 
 # Deploy [MiniCPM](https://github.com/OpenBMB/MiniCPM) on IOS
 The first method is to directly download our converted [model](https://openbmb.oss-cn-hongkong.aliyuncs.com/model_center/mobile/ios/MiniCPM/minicpm-q4_1.gguf)，You can skip the subsequent conversion steps.
