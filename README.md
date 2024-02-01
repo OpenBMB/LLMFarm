@@ -11,7 +11,7 @@ The second method is to download the original model from the huggingface and fol
 
 ## convert model
 1. downloading model
-1. git clone https://github.com/OpenBMB/llama.cpp
+1. git clone https://github.com/OpenBMB/llama.cpp.git
 2. cd llama.cpp && make -j8
 3. python3 convert.py ${hf_model_dir} --vocab-type hfft --outtype f32
 4. ./quantize ${hf_model_dir}/ggml-model-f32.gguf ${output_dir}/minicpm-q4_1.gguf q4_1
