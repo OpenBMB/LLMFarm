@@ -1,4 +1,5 @@
-# MiniCPM
+LLMFarm-MiniCPM
+
 [英文版](https://github.com/OpenBMB/LLMFarm-MiniCPM/blob/main/README.md)
 
 代码基于[LLMFarm](https://github.com/guinmoon/LLMFarm). 需要注意的是，运行在ios上的是量化后的模型，可能会有一些精度损失。
