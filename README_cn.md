@@ -1,3 +1,8 @@
+# MiniCPM
+[英文版](https://github.com/OpenBMB/LLMFarm-MiniCPM/blob/main/README.md)
+
+代码基于[LLMFarm](https://github.com/guinmoon/LLMFarm). 需要注意的是，运行在ios上的是量化后的模型，可能会有一些精度损失。
+
 # ios上部署[MiniCPM](https://github.com/OpenBMB/MiniCPM)说明
 第一种直接下载我们转换好的模型：[转换好的模型](https://openbmb.oss-cn-hongkong.aliyuncs.com/model_center/mobile/ios/MiniCPM/minicpm-q4_1.gguf)，可以跳过模型转换和量化
 
