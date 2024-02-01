@@ -1,5 +1,5 @@
 # MiniCPM
-[中文版](https://github.com/OpenBMB/LLMFarm-MiniCPM/blob/main/CPM.md)
+[中文版](https://github.com/OpenBMB/LLMFarm-MiniCPM/blob/main/README_cn.md)
 
 Based on [LLMFarm](https://github.com/guinmoon/LLMFarm), we run MiniCPM on ios devices.
 Note that the models run on android are quantized to 4-bit and may lose some performance. The original models can be found [here](https://github.com/OpenBMB/miniCPM).
@@ -21,7 +21,7 @@ The second method is to download the original model from the huggingface and fol
 2. Setting Siging & Capabilities
 3. Select a device My MaC or your iphone
 4. run
-   <img width="1365" alt="image" src="https://github.com/OpenBMB/LLMFarm-MiniCPM/assets/24504497/b44cfaf5-64c6-4eb1-a0e9-aaaa9d24cacc">
+<img width="1365" alt="image" src="https://github.com/OpenBMB/LLMFarm-MiniCPM/assets/24504497/b44cfaf5-64c6-4eb1-a0e9-aaaa9d24cacc">
 
 
 ## chat
