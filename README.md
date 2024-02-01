@@ -1,4 +1,5 @@
-# MiniCPM
+# LLMFarm-MiniCPM
+
 [中文版](https://github.com/OpenBMB/LLMFarm-MiniCPM/blob/main/README_cn.md)
 
 Based on [LLMFarm](https://github.com/guinmoon/LLMFarm), we run MiniCPM on ios devices.
