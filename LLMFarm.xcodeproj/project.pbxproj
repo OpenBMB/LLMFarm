@@ -37,7 +37,6 @@
 		15A3EDD12A21266E0030AF5A /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A3EDD02A21266D0030AF5A /* SearchView.swift */; };
 		15A3EDD62A223C9E0030AF5A /* llmfarm_core in Frameworks */ = {isa = PBXBuildFile; productRef = 15A3EDD52A223C9E0030AF5A /* llmfarm_core */; };
 		15A3EDD82A223CB00030AF5A /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A3EDD72A223CB00030AF5A /* Accelerate.framework */; };
-		15A3EDDA2A223CDB0030AF5A /* llmfarm_core in Frameworks */ = {isa = PBXBuildFile; productRef = 15A3EDD92A223CDB0030AF5A /* llmfarm_core */; };
 		15B1B9CB2AF023080058F275 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B1B9CA2AF023080058F275 /* main.swift */; };
 		15B1B9D02AF025DD0058F275 /* llmfarm_core in Frameworks */ = {isa = PBXBuildFile; productRef = 15B1B9CF2AF025DD0058F275 /* llmfarm_core */; };
 		15B1B9D12AF025E10058F275 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E61E38F329B1F0BA00114C15 /* Accelerate.framework */; };
@@ -63,6 +62,7 @@
 		15F210962A1920AA0021F414 /* AIChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F210922A1920AA0021F414 /* AIChatModel.swift */; };
 		15F210AA2A1A659B0021F414 /* FileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F210A92A1A659B0021F414 /* FileHelper.swift */; };
 		15FB67422B1BDB0800174379 /* ExportLoraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FB67412B1BDB0800174379 /* ExportLoraView.swift */; };
+		4444FDC42B6CACED00BC9F84 /* llmfarm_core in Frameworks */ = {isa = PBXBuildFile; productRef = 4444FDC32B6CACED00BC9F84 /* llmfarm_core */; };
 		44682F9F2B5F58D6008467F3 /* input.json in Resources */ = {isa = PBXBuildFile; fileRef = 44682F9E2B5F58C6008467F3 /* input.json */; };
 		44682FA12B5F7BB6008467F3 /* output.json in Resources */ = {isa = PBXBuildFile; fileRef = 44682FA02B5F6AC2008467F3 /* output.json */; };
 /* End PBXBuildFile section */
@@ -166,6 +166,8 @@
 		445ECF402B591ACD0023E5CE /* cpmb-model-q4_1.gguf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "cpmb-model-q4_1.gguf"; path = "models/cpmb-model-q4_1.gguf"; sourceTree = "<group>"; };
 		44682F9E2B5F58C6008467F3 /* input.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = input.json; sourceTree = "<group>"; };
 		44682FA02B5F6AC2008467F3 /* output.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = output.json; sourceTree = "<group>"; };
+		44DB41672B6CAB4000624656 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = llmfarm_core.swift/Package.swift; sourceTree = "<group>"; };
+		44DB41682B6CAB5100624656 /* llmfarm_core */ = {isa = PBXFileReference; lastKnownFileType = folder; name = llmfarm_core; path = llmfarm_core.swift/Sources/llmfarm_core; sourceTree = "<group>"; };
 		E61E38F329B1F0BA00114C15 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		E61E38F529B1F12E00114C15 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E624E2102958F21E00996CD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -205,7 +207,7 @@
 				15B9D7422A4B55EA00276782 /* MetalPerformanceShaders.framework in Frameworks */,
 				15B9D7432A4B55EA00276782 /* Metal.framework in Frameworks */,
 				15B9D7442A4B55EA00276782 /* MetalKit.framework in Frameworks */,
-				15A3EDDA2A223CDB0030AF5A /* llmfarm_core in Frameworks */,
+				4444FDC42B6CACED00BC9F84 /* llmfarm_core in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +380,8 @@
 		E624E259295902A100996CD1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				44DB41682B6CAB5100624656 /* llmfarm_core */,
+				44DB41672B6CAB4000624656 /* Package.swift */,
 				15B1B9D52AF025FC0058F275 /* MetalPerformanceShadersGraph.framework */,
 				159650F02A49F8400007BE5C /* Metal.framework */,
 				159650EE2A49F8400007BE5C /* MetalKit.framework */,
@@ -451,7 +455,7 @@
 			);
 			name = LLMFarm;
 			packageProductDependencies = (
-				15A3EDD92A223CDB0030AF5A /* llmfarm_core */,
+				4444FDC32B6CACED00BC9F84 /* llmfarm_core */,
 			);
 			productName = LLMFarm;
 			productReference = 15F2107E2A191B190021F414 /* LLMFarm.app */;
@@ -657,7 +661,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 12;
-				DEVELOPMENT_ASSET_PATHS = "LLMFarm/Preview\\ Content models";
+				DEVELOPMENT_ASSET_PATHS = "LLMFarm/Preview\\ Content";
 				DEVELOPMENT_TEAM = 8U538LMC3K;
 				ENABLE_HARDENED_RUNTIME = YES;
 				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
@@ -706,7 +710,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 12;
-				DEVELOPMENT_ASSET_PATHS = "LLMFarm/Preview\\ Content models";
+				DEVELOPMENT_ASSET_PATHS = "LLMFarm/Preview\\ Content";
 				DEVELOPMENT_TEAM = 8U538LMC3K;
 				ENABLE_HARDENED_RUNTIME = YES;
 				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
@@ -912,11 +916,11 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = llmfarm_core;
 		};
-		15A3EDD92A223CDB0030AF5A /* llmfarm_core */ = {
+		15B1B9CF2AF025DD0058F275 /* llmfarm_core */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = llmfarm_core;
 		};
-		15B1B9CF2AF025DD0058F275 /* llmfarm_core */ = {
+		4444FDC32B6CACED00BC9F84 /* llmfarm_core */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = llmfarm_core;
 		};
