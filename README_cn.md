@@ -18,6 +18,8 @@ LLMFarm-MiniCPM
    
 
 ## 编译安装
+1. git clone https://github.com/OpenBMB/LLMFarm-MiniCPM.git
+2. cd LLMFarm-MiniCPM && git submodule update --init --recursive
 1. 用xcode打开当前目录
 2. 配置开发者账号
 3. 设备选择mac或者手机

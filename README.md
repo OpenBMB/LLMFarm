@@ -18,6 +18,8 @@ The second method is to download the original model from the huggingface and fol
 4. ./quantize ${hf_model_dir}/ggml-model-f32.gguf ${output_dir}/minicpm-q4_1.gguf q4_1
 
 ## compile
+1. git clone https://github.com/OpenBMB/LLMFarm-MiniCPM.git
+2. cd LLMFarm-MiniCPM && git submodule update --init --recursive
 1. Open this project with Xcode
 2. Setting Siging & Capabilities
 3. Select a device My MaC or your iphone
