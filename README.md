@@ -8,7 +8,7 @@ Note that the models run on ios are quantized to 4-bit and may lose some perform
 # Deploy [MiniCPM](https://github.com/OpenBMB/MiniCPM) on IOS
 The first method is to directly download our converted [model](https://openbmb.oss-cn-hongkong.aliyuncs.com/model_center/mobile/ios/MiniCPM/minicpm-q4_1.gguf)，You can skip the subsequent conversion steps.
 
-The second method is to download the original model from the huggingface and follow the steps below to convert and quantify it.
+The second method is to download the original model from the [huggingface](https://huggingface.co/openbmb/MiniCPM-2B-sft-bf16) and follow the steps below to convert and quantify it.
 
 ## convert model
 1. downloading model
